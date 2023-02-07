@@ -87,6 +87,12 @@ module.exports = {
           from: getSrcPath('../appsscript.json'),
           to: '[name][ext]',
         },
+        {
+          from: getSrcPath('../functions/*.js'),
+          to: '[name][ext]',
+          noErrorOnMissing: true,
+          info: { minimized: true },
+        },
       ],
     }),
     new GasPlugin({
